@@ -1,7 +1,7 @@
 class PatternGenerator
 
-  def initialize(pattern)
-    @pattern = pattern.upcase
+  def initialize(input)
+    @formatted_input = input.upcase
     @encoded_output_pattern = []
   end
 
@@ -15,8 +15,8 @@ class PatternGenerator
 
   def pattern_gen
     output_size = 0
-    until @encoded_output_pattern.join("").size == @pattern.size
-      if @pattern[output_size] == "X"
+    until @encoded_output_pattern.join("").size == @formatted_input.size
+      if @formatted_input[output_size] == "X"
         @encoded_output_pattern << char_gen
       else
         @encoded_output_pattern << num_gen
