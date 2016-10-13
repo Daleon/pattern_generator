@@ -1,5 +1,3 @@
-require 'pry'
-
 class PatternGenerator
 
   def initialize(pattern)
